@@ -7,7 +7,7 @@ import time
 application = Flask(__name__)
 
 MyName = "Friday"
-chatbot = ChatBot(MyName, storage_adapter="chatterbot.storage.SQLStorageAdapter")
+chatbot = ChatBot(MyName, storage_adapter="chatterbot.storage.SQLStorageAdapter", logic_adapters=["chatterbot.logic.MathematicalEvaluation","chatterbot.logic.BestMatch"])
 trainer = ChatterBotCorpusTrainer(chatbot)
 #trainer.export_for_training('./export.yml')
 trainer.train("chatterbot.corpus.english.conversations")
@@ -35,7 +35,7 @@ def bot_inout():
     if message == 'what is your name' or message == 'what is your name?':
         reply = "I'm Friday"
         return reply
-    elif message == 'what is my name' or message == 'what is my name?':
+    elif message == 'what is my name' or message == 'what is my name ?':
         reply = "I'm not an astrologer"
         return reply
     elif message.__contains__('bye') or message == 'see you':
@@ -44,9 +44,10 @@ def bot_inout():
     elif message.__contains__('fuck'):
         reply = 'Dont speak bad words!!!\nI m really disappointed!!!'
         return reply
-    elif message == "what's the time" or message == "what is the time":
-        Time = time.clock()
-        return Time
+    elif message == "okay" or message == "fine" or message == "oh okay" or message == "ohokay":
+        reply = 'Hmm'
+        return reply
+
     else:
         return str(chatbot.get_response(subtext))
 
