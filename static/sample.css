@@ -1,14 +1,15 @@
 body {
     font-family: Times New Roman;
-    background-image: url("whatsapp.jpg")
+    background-image: url("Chatbg.jpg")
 }
 
 h1 {
-    color: black;
+    color: white;
     margin-bottom: 0;
     margin-top: 0;
     text-align: center;
-    font-size: 40px;
+    font-size: 60px;
+    text-shadow: 2px 2px 5px black;
 }
 
 #chatbox {
@@ -27,16 +28,24 @@ h1 {
 
 #textInput {
     width: 87%;
-    border-style: outset;
+    border-style: double;
     border-bottom: 3px solid #009688;
-    font-family: monospace;
-    font-size: 17px;
+    font-family: Georgia;
+    border-radius: 5px;
+    font-size: 19px;
 }
 
 #buttonInput {
-    padding: 3px;
-    font-family: monospace;
+    padding: 5px;
+    font-family: Lucida Console;
+    background-color: #008CBA;
+    text-align: center;
+    border-radius: 5px;
+    cursor: pointer;
+    display: inline-block;
+    font-weight: bold;
     font-size: 17px;
+    box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
 }
 
 .userText {
@@ -50,21 +59,21 @@ h1 {
 .userText span {
     background-color: #780000;
     padding: 10px;
-    border-radius: 2px;
+    border-radius: 5px;
 }
 
 .botText {
     color: blue;
     font-family: Courier New;
-    font-size: 17px;
+    font-size: 19px;
     text-align: left;
     line-height: 30px;
 }
 
 .botText span {
-    background-color: #000000;
+    background-color: #EFFE00;
     padding: 10px;
-    border-radius: 2px;
+    border-radius: 5px;
 }
 
 #tidbit {
