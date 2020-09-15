@@ -1,5 +1,6 @@
 # Intialization
-Friday(Mark 1)
+Mark1
 
-A Simple Chat bot developed using flask framework and hosted in a micro server.
+Alice - Chat bot.
+Developed using Flask framework
 Checkout project link: http://rakeshpraneel.pythonanywhere.com/
